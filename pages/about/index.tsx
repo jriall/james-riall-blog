@@ -10,7 +10,7 @@ const About: React.FC = () => {
         I&apos;m James Riall, a software engineer and tech lead living in
         London. I currently work as a Tech Lead in Product Growth for GoCardless
       </p>
-      <Image src={profilePhoto} alt="" width={500} height={500} />
+      <Image src={profilePhoto} alt="" width={300} height={300} />
     </div>
   );
 };
