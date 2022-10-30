@@ -11,9 +11,6 @@ export const Header: React.FC = () => {
         <Link href="/about" className="px-6 text-xl hover:underline">
           About
         </Link>
-        <Link href="/posts" className="px-6 text-xl hover:underline">
-          Posts
-        </Link>
       </div>
     </header>
   );

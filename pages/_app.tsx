@@ -1,11 +1,24 @@
 import { MainPageLayout } from "../components/MainPageLayout";
 import "../styles/globals.css";
+import { MDXProvider } from "@mdx-js/react";
+import MDXComponents from "../components/MDXComponents";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <MainPageLayout>
-      <Component {...pageProps} />
-    </MainPageLayout>
+    <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto"
+          rel="stylesheet"
+        />
+      </Head>
+      <MDXProvider components={MDXComponents}>
+        <MainPageLayout>
+          <Component {...pageProps} />
+        </MainPageLayout>
+      </MDXProvider>
+    </>
   );
 }
 
