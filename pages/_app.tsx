@@ -6,19 +6,11 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto"
-          rel="stylesheet"
-        />
-      </Head>
-      <MDXProvider components={MDXComponents}>
-        <MainPageLayout>
-          <Component {...pageProps} />
-        </MainPageLayout>
-      </MDXProvider>
-    </>
+    <MDXProvider components={MDXComponents}>
+      <MainPageLayout>
+        <Component {...pageProps} />
+      </MainPageLayout>
+    </MDXProvider>
   );
 }
 
