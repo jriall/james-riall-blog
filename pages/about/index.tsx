@@ -8,7 +8,7 @@ const About: React.FC = () => {
     <>
       <Meta
         title="James Riall"
-        description="A collection of articles, thoughts, notes, and observations"
+        description="A collection of articles, thoughts, notes, and observations on software engineering"
       />
       <AboutView />
     </>

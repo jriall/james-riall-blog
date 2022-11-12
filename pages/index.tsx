@@ -20,7 +20,7 @@ const Homepage: React.FC<{ posts: Post[] }> = ({ posts }) => {
     <>
       <Meta
         title="James Riall"
-        description="A collection of articles, thoughts, notes, and observations"
+        description="A collection of articles, thoughts, notes, and observations on software engineering"
       />
       <HomepageView posts={posts} />
     </>
