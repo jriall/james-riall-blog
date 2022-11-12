@@ -1,10 +1,12 @@
-import { MainPageLayout } from "../components/MainPageLayout";
-import "../styles/globals.css";
 import { MDXProvider } from "@mdx-js/react";
-import MDXComponents from "../components/MDXComponents";
-import Head from "next/head";
+import { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+import { MainPageLayout } from "../components/MainPageLayout";
+import MDXComponents from "../components/MDXComponents";
+
+import "../styles/globals.css";
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <MDXProvider components={MDXComponents}>
       <MainPageLayout>
@@ -12,6 +14,6 @@ function MyApp({ Component, pageProps }) {
       </MainPageLayout>
     </MDXProvider>
   );
-}
+};
 
 export default MyApp;

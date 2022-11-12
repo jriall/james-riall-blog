@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { Post } from "../../types/posts";
+import { Post } from "types/posts";
 
 export const PostItem: React.FC<{ post: Post }> = ({ post }) => {
   return (

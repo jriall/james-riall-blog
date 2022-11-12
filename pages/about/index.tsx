@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import profilePhoto from "public/images/profile-photo.jpg";
+
 import { Meta } from "../../components/Meta";
 
 const About: React.FC = () => {
