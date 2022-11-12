@@ -7,14 +7,16 @@ export const MainPageLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
-    <div className="max-w-5xl m-auto p-2">
-      <div className="flex flex-col justify-between min-h-screen">
-        <div>
-          <Header />
-          <main>{children}</main>
+    <>
+      <Header />
+      <div className="max-w-3xl m-auto p-2">
+        <div className="flex flex-col justify-between min-h-screen">
+          <div>
+            <main>{children}</main>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
-    </div>
+    </>
   );
 };

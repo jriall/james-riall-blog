@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Meta } from "../components/Meta";
-import { Homepage } from "../components/routes/Homepage";
+import { HomepageView } from "../components/routes/Homepage";
 import { getPosts } from "../scripts/utils";
 import { Post } from "types/posts";
 
@@ -15,16 +15,16 @@ export const getStaticProps = () => {
   };
 };
 
-const Home: React.FC<{ posts: Post[] }> = ({ posts }) => {
+const Homepage: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     <>
       <Meta
         title="James Riall"
         description="A collection of articles, thoughts, notes, and observations"
       />
-      <Homepage posts={posts} />
+      <HomepageView posts={posts} />
     </>
   );
 };
 
-export default Home;
+export default Homepage;

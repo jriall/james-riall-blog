@@ -4,7 +4,7 @@ import { Post } from "types/posts";
 
 import { PostItem } from "./PostItem";
 
-export const Homepage: React.FC<{ posts: Post[] }> = ({ posts }) => {
+export const HomepageView: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     <div>
       <h1 className="py-6 text-4xl">Posts</h1>
