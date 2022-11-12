@@ -14,9 +14,9 @@ export const MainPageLayout: React.FC<{ children: React.ReactNode }> = ({
           <div>
             <main>{children}</main>
           </div>
-          <Footer />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

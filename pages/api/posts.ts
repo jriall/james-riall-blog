@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { getPosts } from "../../scripts/utils";
+import { getPosts } from "utils/getPosts";
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {
   const posts = getPosts();

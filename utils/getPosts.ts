@@ -16,8 +16,14 @@ export const getPosts = (): Post[] => {
         "utf-8"
       );
       const { data, content } = matter(fileContent);
+      data["publishedOn"] = new Date(data["publishedOn"]).toUTCString();
       const slug = file.name.replace(/.mdx$/, "");
       return { data, content, slug };
     })
-    .filter((post) => !!post) as Post[];
+    .filter((post) => !!post)
+    .sort((a, b) => {
+      return (
+        Date.parse(b.data["publishedOn"]) - Date.parse(a.data["publishedOn"])
+      );
+    }) as Post[];
 };

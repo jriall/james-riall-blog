@@ -2,7 +2,7 @@ import React from "react";
 
 import { Meta } from "../components/Meta";
 import { HomepageView } from "../components/routes/Homepage";
-import { getPosts } from "../scripts/utils";
+import { getPosts } from "utils/getPosts";
 import { Post } from "types/posts";
 
 export const getStaticProps = () => {
