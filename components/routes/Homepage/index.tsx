@@ -7,7 +7,7 @@ import { PostItem } from "./PostItem";
 export const HomepageView: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     <div>
-      <h1 className="py-6 text-4xl">Posts</h1>
+      <h1 className="py-6 text-4xl mb-12">Posts</h1>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
