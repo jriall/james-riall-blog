@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import { Post } from "../types/posts";
+import { Post, PostFrontmatter } from "../types/posts";
 
 export const getPosts = (): Post[] => {
   return fs
@@ -15,15 +15,14 @@ export const getPosts = (): Post[] => {
         path.join(process.cwd(), "pages", "posts", file.name),
         "utf-8"
       );
-      const { data, content } = matter(fileContent);
-      data["publishedOn"] = new Date(data["publishedOn"]).toUTCString();
       const slug = file.name.replace(/.mdx$/, "");
-      return { data, content, slug };
+      const { data, content } = matter(fileContent);
+      const post: Post = { data: data as PostFrontmatter, content, slug };
+      post.data.publishedOn = new Date(data.publishedOn).toUTCString();
+      return post;
     })
-    .filter((post) => !!post)
+    .filter((post) => post.data.isPublished)
     .sort((a, b) => {
-      return (
-        Date.parse(b.data["publishedOn"]) - Date.parse(a.data["publishedOn"])
-      );
+      return Date.parse(b.data.publishedOn) - Date.parse(a.data.publishedOn);
     }) as Post[];
 };
