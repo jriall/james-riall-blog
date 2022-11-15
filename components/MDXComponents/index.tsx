@@ -8,6 +8,10 @@ const MDXComponents: import("mdx/types").MDXComponents = {
   h5: (props) => <h5 {...props} className="text-xl text-gray-900 mt-8 mb-4" />,
   h6: (props) => <h6 {...props} className="text-lg text-gray-900 mt-8 mb-4" />,
   p: (props) => <p {...props} className="text-lg text-gray-600 my-4" />,
+  ul: (props) => (
+    <ul {...props} className="text-lg text-gray-600 my-4 pl-8 list-disc" />
+  ),
+  li: (props) => <li {...props} className="text-lg text-gray-600 my-4 pl-4" />,
   a: (props) => <a {...props} className="text-lg underline text-blue-600" />,
 };
 
